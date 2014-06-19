@@ -2,6 +2,13 @@
 ## [This R file contains two functions. makeCacheMatrix and cacheSolve ]
 ## makeCacheMatrix creates a list of functions related to matrix x: set(), get(), setinvert() and getinvert()
 ## cacheSolve returns a matrix that is the inverse of 'x' unless an inverted matrix has already been computed in that case this matrix is retured
+## the script was tested using a generated invertable matrix and runnign cachematrix twice to test that it returned a cached result the second time
+
+#newmatrix <- matrix(c(0,2,2,0),2,2)
+#cachedmatrix <- makeCacheMatrix(newmatrix)
+#cacheSolve(cachedmatrix)
+#cacheSolve(cachedmatrix) #should return the string "Getting cached data" and then the inverted matrix
+
 
 makeCacheMatrix <- function(x = matrix()) {
   ## Creates a list of functions related to matrix x: set(), get(), setinvert() and getinvert()
