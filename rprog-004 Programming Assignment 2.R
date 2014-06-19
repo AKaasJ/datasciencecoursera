@@ -1,10 +1,12 @@
 #rprog-004 Programming Assignment 2
 ## [This R file contains two functions. makeCacheMatrix and cacheSolve ]
+## makeCacheMatrix creates a list of functions related to matrix x: set(), get(), setinvert() and getinvert()
+## cacheSolve returns a matrix that is the inverse of 'x' unless an inverted matrix has already been computed in that case this matrix is retured
 
 makeCacheMatrix <- function(x = matrix()) {
   ## Creates a list of functions related to matrix x: set(), get(), setinvert() and getinvert()
   i <- NULL #i is the inverted cached matrix is NULL at the beginning
-  set <- function(y) { #set function allows for changing x
+  set <- function(y) { #set function allows for changing the matrix x
     x <<- y
     i <<- NULL #resets i to NULL
   }
